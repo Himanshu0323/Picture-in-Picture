@@ -5,9 +5,9 @@ const button = document.getElementById('button');
 async function selectMediaStream(){
     try{
         const mediaStream = await navigator.mediaDevices.getDisplayMedia();
-        videoElement.srcobject =  mediaStream;
+        videoElement.srcObject =  mediaStream;
         videoElement.onloadedmetadata = () => {
-            videoElement.onplay();
+            videoElement.play();
         }
     }catch(error){
         console.log('enable to load the video',error);
